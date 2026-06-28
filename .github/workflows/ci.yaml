@@ -38,6 +38,6 @@ jobs:
       - name: Run tests with coverage
         run: >
           pytest tests/ -v
-          --cov=src/us_accidents_etl
+          --cov=us_accidents_etl
           --cov-report=term-missing
           --cov-report=xml
