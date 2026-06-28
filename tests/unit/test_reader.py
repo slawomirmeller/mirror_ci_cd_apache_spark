@@ -10,9 +10,7 @@ def test_read_accidents_csv_reads_header_and_infers_schema(
 ):
     csv_path = tmp_path / "accidents.csv"
     csv_path.write_text(
-        "Severity,Weather_Condition,City\n"
-        "3,Rain,Miami\n"
-        "4,Snow,Denver\n",
+        "Severity,Weather_Condition,City\n" "3,Rain,Miami\n" "4,Snow,Denver\n",
         encoding="utf-8",
     )
 
