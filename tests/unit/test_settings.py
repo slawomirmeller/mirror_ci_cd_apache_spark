@@ -1,6 +1,5 @@
 import pytest
 from pydantic import ValidationError
-import os
 
 from us_accidents_etl.config.settings import ETLConfig, SparkConfig, get_settings
 

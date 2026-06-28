@@ -1,3 +1,26 @@
+[project]
+name = "us-accidents-etl"
+version = "0.1.0"
+requires-python = ">=3.10"
+
 [tool.pytest.ini_options]
 pythonpath = ["src"]
 testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = [
+   "E",   # pycodestyle — styl
+   "F",   # pyflakes — błędy logiczne (unused imports itp.)
+   "I",   # isort — kolejność importów
+   "UP",  # pyupgrade — nowoczesna składnia (np. list[str] zamiast List[str])
+]
+ignore = [
+   "E501",  # długie linie obsługuje formatter
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S101"]  # assert jest OK w testach
